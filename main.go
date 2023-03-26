@@ -245,7 +245,7 @@ func getCode( i item ) string {
 
 	var raw_url = getRawUrl(i.HtmlUrl)
 
-	client := http.Client{ Timeout: time.Second * 5 }
+	client := http.Client{ Timeout: time.Second * 10 }
 
 	req, err := http.NewRequest("GET", raw_url, nil)
 	if err != nil {
